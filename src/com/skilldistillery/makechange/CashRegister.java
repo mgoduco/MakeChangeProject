@@ -15,12 +15,16 @@ public class CashRegister {
 		tender = sc.nextDouble();
 		if (price > tender) {
 			System.out.println("Error: Come back when you get some more money buddy!");
-
+		}	else {
+			
 		}
-
+		sc.close();
 	}
 
-	private static void change() {
+	private static double change(double price, double tender) {
+		double change = 0;
+		
+		return (double)change;
 
 	}
 
