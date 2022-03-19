@@ -14,14 +14,17 @@ public class CashRegister {
 		System.out.println("Please enter the amount tendered: ");
 		tender = sc.nextDouble();
 
-		if (price > tender) {
+		if (price > tender) { // error message
 			System.out.println("Error: Come back when you get some more money buddy!");
-		} else {
-
+		} else { // this is where it will give you the change
+			
 		}
 		sc.close();
+		
+		conversion(3.79, 12.55);
 	}
 
+	// method for calculating change
 	private static double change(double price, double tender) {
 		double change = 0;
 
@@ -29,16 +32,22 @@ public class CashRegister {
 
 	}
 
+	// method for casting original scanner input doubles to ints to remove decimals
+	private static int conversion(double price, double tender) {
+		int value = (int) ((tender * 100) - (price * 100));
+		System.out.println(value);
+		return value;
+	}
 }
 
 //	User Story #1
 //	The user is prompted asking for the price of the item. CW
 //	
 //	User Story #2
-//	The user is then prompted asking how much money was tendered by the customer.
+//	The user is then prompted asking how much money was tendered by the customer. CW
 //	
 //	User Story #3
-//	Display an appropriate message if the customer provided too little money or the exact amount.
+//	Display an appropriate message if the customer provided too little money or the exact amount. CW
 //	
 //	User Story #4
 //	If the amount tendered is more than the cost of the item, display the number 
