@@ -17,17 +17,20 @@ public class CashRegister {
 		if (price > tender) { // error message
 			System.out.println("Error: Come back when you get some more money buddy!");
 		} else { // this is where it will give you the change
-			
+
 		}
 		sc.close();
-		
-		conversion(3.79, 12.55);
+
 	}
 
 	// method for calculating change
 	private static double change(double price, double tender) {
-		double change = 0;
-
+		
+		int change = conversion(price, tender);
+		double exactChange = ((double) change) / 100;
+		System.out.println(exactChange);
+		int twenty = 0, ten = 0, five = 0, one = 0, quarter = 0, dime = 0, nickel = 0, penny = 0;
+		
 		return change;
 
 	}
@@ -35,7 +38,6 @@ public class CashRegister {
 	// method for casting original scanner input doubles to ints to remove decimals
 	private static int conversion(double price, double tender) {
 		int value = (int) ((tender * 100) - (price * 100));
-		System.out.println(value);
 		return value;
 	}
 }
