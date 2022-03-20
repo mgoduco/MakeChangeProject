@@ -40,61 +40,59 @@ public class CashRegister {
 			if (twenty > 0) {
 				System.out.println(twenty + " twenties");
 			}
-			while (change != 0) {
+			while (change >= 1000) {
 				change -= 1000;
 				ten++;
 			}
 			if (ten > 0) {
 				System.out.println(ten + " tens");
 			}
-			while (change != 0) {
+			while (change >= 500) {
 				change -= 500;
 				five++;
 			}
 			if (five > 0) {
 				System.out.println(five + " fives");
 			}
-			while (change != 0) {
+			while (change >= 100) {
 				change -= 100;
 				one++;
 			}
 			if (one > 0) {
 				System.out.println(one + " ones");
 			}
-			while (change != 0) {
+			while (change >= 25) {
 				change -= 25;
 				quarter++;
 			}
 			if (quarter > 0) {
 				System.out.println(quarter + " quarters");
 			}
-			while (change != 0) {
+			while (change >= 10) {
 				change -= 10;
 				dime++;
-				System.out.println(change);
 			}
 			if (dime > 0) {
 				System.out.println(dime + " dimes");
 			}
-			while (change != 0) {
+			while (change >= 5) {
 				change -= 5;
 				nickel++;
-				System.out.println(change);
 			}
 			if (nickel > 0) {
 				System.out.println(nickel + " nickels");
 			}
-			while (change != 0) {
+			while (change >= 1) {
 				change -= 1;
 				penny++;
-				System.out.println(change);
 			}
 			if (penny > 0) {
 				System.out.println(penny + " pennies");
 			}
-			}
+		}
 		return change;
 	}
+	
 
 	// method for casting original scanner input doubles to ints to remove decimals
 	private static int conversion(double price, double tender) {
