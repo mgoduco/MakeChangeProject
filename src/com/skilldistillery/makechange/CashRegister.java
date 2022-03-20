@@ -17,7 +17,7 @@ public class CashRegister {
 		if (price > tender) { // error message
 			System.out.println("Error: Come back when you get some more money buddy!");
 		} else { // this is where it will give you the change
-
+			change(price, tender);
 		}
 		sc.close();
 
@@ -25,14 +25,75 @@ public class CashRegister {
 
 	// method for calculating change
 	private static double change(double price, double tender) {
-		
+
 		int change = conversion(price, tender);
 		double exactChange = ((double) change) / 100;
 		System.out.println(exactChange);
 		int twenty = 0, ten = 0, five = 0, one = 0, quarter = 0, dime = 0, nickel = 0, penny = 0;
-		
-		return change;
 
+		while (change != 0) {
+			while (change >= 2000) {
+				change -= 2000;
+				twenty++;
+				System.out.println(change);
+			}
+			if (twenty > 0) {
+				System.out.println(twenty + " twenties");
+			}
+			while (change != 0) {
+				change -= 1000;
+				ten++;
+			}
+			if (ten > 0) {
+				System.out.println(ten + " tens");
+			}
+			while (change != 0) {
+				change -= 500;
+				five++;
+			}
+			if (five > 0) {
+				System.out.println(five + " fives");
+			}
+			while (change != 0) {
+				change -= 100;
+				one++;
+			}
+			if (one > 0) {
+				System.out.println(one + " ones");
+			}
+			while (change != 0) {
+				change -= 25;
+				quarter++;
+			}
+			if (quarter > 0) {
+				System.out.println(quarter + " quarters");
+			}
+			while (change != 0) {
+				change -= 10;
+				dime++;
+				System.out.println(change);
+			}
+			if (dime > 0) {
+				System.out.println(dime + " dimes");
+			}
+			while (change != 0) {
+				change -= 5;
+				nickel++;
+				System.out.println(change);
+			}
+			if (nickel > 0) {
+				System.out.println(nickel + " nickels");
+			}
+			while (change != 0) {
+				change -= 1;
+				penny++;
+				System.out.println(change);
+			}
+			if (penny > 0) {
+				System.out.println(penny + " pennies");
+			}
+			}
+		return change;
 	}
 
 	// method for casting original scanner input doubles to ints to remove decimals
