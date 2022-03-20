@@ -5,14 +5,16 @@
 ## Overview
 
 Cash register simulator.
-TODO: FINISH WRITING THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+A simple cash register program where you will enter the price of an item and the amount tendered
+the program will then return the user the cash back in correct denominations
 
-## Technologoies/Skills Used
+## Technologies/Skills Used
 
 * Java
 * Eclipse
-* TODO: MORE
+* Github
 
 ## Lessons Learned
 
-TODO: WRITE THIS 
+Utilize System.out.println as much as possible to test and verify code working as intended
+Inserting comments in methods in code to remind what they do if taking a break with code
